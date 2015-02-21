@@ -9,6 +9,7 @@
     } else {
       $single_news = ''; 
     }
+    //
 ?>
 
 <!DOCTYPE html>
