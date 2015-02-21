@@ -1,7 +1,7 @@
-# kaupunkiuutiset
-Hamk 2015 - Web-kehitys projekti
+#kaupunkiuutiset
+<b>Hamk 2015 - Web-kehitys projekti</b>
 
-Jouni Hyttinen ja Teemu Hellas
+<i>Jouni Hyttinen ja Teemu Hellas</i>
 
 Kuvitteellinen nettiuutissivusto
 
