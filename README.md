@@ -5,7 +5,7 @@
 
 Kuvitteellinen nettiuutissivusto
 
-<b>Host:</b><br>
+<b>Web-palvelin:</b><br>
 GearHost<br>
 http://kaupunkiuutiset.gear.host
 
