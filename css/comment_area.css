@@ -1,0 +1,45 @@
+#comment_area {
+    max-width: 570px;
+    margin: 0px auto;
+}
+
+#comment_area button {
+    float: right;
+    width:  75px;
+    height:  35px;
+    margin: 0px 10px 0px 0px;
+}
+
+#comment {
+    position: relative;
+    max-width: 550px;
+    margin-bottom: 5px;
+    border: 1px solid grey;
+}
+
+.even_comment {
+    margin-left: -10px;
+    background-color: #f4f4f4;
+}
+
+.odd_comment {
+    margin-right: -10px;
+    background-color: #e6e6e6;
+}
+
+#comment_sender {
+    margin: 2px 20px;
+    font-size: 70%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#comment .timestamp {
+    position: absolute;
+    top:  2px;
+    right:  10px;
+}
+
+#comment_text {
+    margin: 10px 20px;
+}
