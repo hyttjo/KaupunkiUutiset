@@ -5,7 +5,7 @@
 
 Kuvitteellinen nettiuutissivusto
 
-<b>Host:</b><br>
+<b>Web-palvelin:</b><br>
 GearHost<br>
 http://kaupunkiuutiset.gear.host
 
@@ -16,9 +16,10 @@ WebMatrix 3
 GitHub
 
 <b>Käytetyt tekniikat:</b><br>
+Paint Shop Pro X6 - sivuston hahmottelu<br>
 HTML5 - sivuston runko<br>
 CSS 3.0 - tyylit<br>
-jQuery - client-puolen koodi<br>
+jQuery - Client-puolen koodi<br>
 PHP - Serveri-puolen koodi<br>
 MySQL - tietokanta
 
