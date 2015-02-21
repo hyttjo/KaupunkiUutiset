@@ -1,4 +1,4 @@
-#kaupunkiuutiset
+#KaupunkiUutiset
 <b>Hamk 2015 - Web-kehitys projekti</b>
 
 <i>Jouni Hyttinen ja Teemu Hellas</i>
