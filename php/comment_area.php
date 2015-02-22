@@ -24,12 +24,16 @@
             </form>
             <?php } if ($comments_num_rows > 0) { ?>
             <h2>Kommentit:</h2>
-            <?php } ?>
+            <?php 
+            }
+            while ($row = mysqli_fetch_array($comments_results)) { 
+            ?>
             <div id="comment">
                 <p id="comment_sender"><?php echo $row['username']; ?></p>
                 <p class="timestamp"><?php echo $row['date']; ?></p>
                 <p id="comment_text"><?php echo $row['text']; ?></p>
             </div>
+            <?php } ?>
         </div>
     </body>
 </html>
