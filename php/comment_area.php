@@ -24,26 +24,12 @@
             </form>
             <?php } if ($comments_num_rows > 0) { ?>
             <h2>Kommentit:</h2>
-            <?php 
-            }
-            $comment_number = 0;
-            
-            while ($row = mysqli_fetch_array($comments_results)) { 
-                if ($comment_number % 2 == 0) {
-                    $comment_even_odd = "even_comment";
-                } else {
-                    $comment_even_odd = "odd_comment";
-                }   
-            ?>
-            <div id="comment" class="<?php echo $comment_even_odd; ?>">
+            <?php } ?>
+            <div id="comment">
                 <p id="comment_sender"><?php echo $row['username']; ?></p>
                 <p class="timestamp"><?php echo $row['date']; ?></p>
                 <p id="comment_text"><?php echo $row['text']; ?></p>
             </div>
-            <?php 
-                $comment_number += 1;
-            } 
-            ?>
         </div>
     </body>
 </html>

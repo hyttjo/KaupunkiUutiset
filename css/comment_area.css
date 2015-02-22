@@ -17,12 +17,11 @@
     border: 1px solid grey;
 }
 
-.even_comment {
+#comment_area > #comment:nth-of-type(even) {
     margin-left: -10px;
     background-color: #f4f4f4;
 }
-
-.odd_comment {
+#comment_area > #comment:nth-of-type(odd) {
     margin-right: -10px;
     background-color: #e6e6e6;
 }
