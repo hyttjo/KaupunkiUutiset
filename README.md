@@ -23,9 +23,11 @@ jQuery - Client-puolen koodi<br>
 PHP - Serveri-puolen koodi<br>
 MySQL - tietokanta
 
-<b>Ominaisuudet:</b><br>
-Käyttäjien rekisteröiminen ja kirjautuminen<br>
-Admin oikeuksilla mahdollisuus lähettää jarjestelmään uusia uutisia<br>
-(saa kun käyttäjä rekisteröi käyttämällä salasanaa "hamk2015")<br>
-Uutisten hakeminen tietokannasta ja järjestely uusimpien / luetuimpien / aihealueen mukaan<br>
-Kommenttien kirjoittaminen uutisiin mikäli on kirjautuneena sisään<br>
+<b>Ominaisuudet:</b>
+<ul>
+  <li>Käyttäjien rekisteröiminen ja kirjautuminen</li>
+  <li>Admin oikeuksilla mahdollisuus lähettää jarjestelmään uusia uutisia<br>
+  (saa kun käyttäjä rekisteröi käyttämällä salasanaa "hamk2015")</li>
+  <li>Uutisten hakeminen tietokannasta ja järjestely uusimpien / luetuimpien / aihealueen mukaan</li>
+  <li>Kommenttien kirjoittaminen uutisiin mikäli on kirjautuneena sisään</li>
+</ul>
