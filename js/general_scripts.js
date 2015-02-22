@@ -8,7 +8,7 @@ $(document).ready(function () {
     });
 
     // Asettaa sivualueen korkeuden samaksi pääuutisalueen kanssa 
-    //$("aside").height($("#news_area").height());
+    $("aside").height($("#news_area").height());
 
     // Lukee ja palauttaa URL attribuutit
     $.extend({ getUrlVars: function(){
