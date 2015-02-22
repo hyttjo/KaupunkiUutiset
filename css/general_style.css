@@ -80,6 +80,6 @@ button:hover {
 }
 
 img {
-    background: transparent url(‘../img/loading.gif’) no-repeat;
+    background: url("../img/loading.gif") no-repeat;
     background-position: center center;
 }
