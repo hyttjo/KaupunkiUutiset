@@ -1,6 +1,6 @@
 aside {
     float: left;
-    width: 28%;
+    width: 26%;
     min-height: 1200px;
     margin:  15px 0px 20px -5px;
     padding: 0px 0px 0px 20px;
@@ -27,4 +27,10 @@ h2 {
 
 #side-block {
     padding: 0px 0px 20px 5px;
+}
+
+@media screen and (max-width: 768px) {  /*iPad portrait view*/
+    aside {
+        display: none;
+    }
 }

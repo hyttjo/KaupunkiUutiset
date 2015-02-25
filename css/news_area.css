@@ -107,3 +107,19 @@ h3 {
 #main_news #eye_icon, #main_news #watched_number {
     float: right;
 }
+
+@media screen and (max-width: 768px) { /*iPad portrait view*/ 
+    #news_area {
+        float: left;
+        width: 90%;
+    }
+
+    h3 {
+        font-size: 140%;
+    }
+    #img_container {
+        margin-bottom: 5px;
+        max-width: 100%;
+        max-height: 250px;  
+    }
+}

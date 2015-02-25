@@ -2,15 +2,18 @@ footer {
     clear: both;
     height: 50px;
     margin: 0px;
-    padding: 5px 40px;
+    padding: 5px 25px;
     background-color: #808080;
     font-size: 80%;
 }
 
 footer ul, footer p {
     display: inline-block;
-    margin:  0px 10px;
-    vertical-align: middle;
+    margin:  0px 5px;
+}
+
+footer li {
+    padding: 5px;
 }
 
 footer a {
@@ -22,4 +25,10 @@ footer a:hover {
     color: #000000;
     text-decoration: underline;
     background-color: #808080;
+}
+
+@media screen and (max-width: 768px) {  /*iPad portrait view*/ 
+    footer ul {
+        display: none;
+    }
 }
