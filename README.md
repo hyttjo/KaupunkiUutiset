@@ -20,6 +20,7 @@ Paint Shop Pro X6 - sivuston hahmottelu<br>
 HTML5 - sivuston runko<br>
 CSS 3.0 - tyylit<br>
 jQuery - Client-puolen koodi<br>
+AJAX - Client-Server keskustelu keskenään<br>
 PHP - Serveri-puolen koodi<br>
 MySQL - tietokanta
 
