@@ -30,4 +30,3 @@ Admin oikeuksilla mahdollisuus lähettää jarjestelmään uusia uutisia<br>
 (saa kun käyttäjä rekisteröi käyttämällä salasanaa "hamk2015")<br>
 Uutisten hakeminen tietokannasta ja järjestely uusimpien / luetuimpien / aihealueen mukaan<br>
 Kommenttien kirjoittaminen uutisiin mikäli on kirjautuneena sisään
-
