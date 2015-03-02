@@ -25,6 +25,7 @@ PHP - Serveri-puolen koodi<br>
 MySQL - tietokanta
 
 <b>Testatut toimivaksi selaimilla:</b><br>
+Google Chrome Mobile<br>
 Google Chrome - v40<br>
 Internet Explorer - 11<br>
 Mozilla Firefox - v36
