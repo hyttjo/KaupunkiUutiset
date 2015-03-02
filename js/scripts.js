@@ -84,23 +84,25 @@ $(document).ready(function () {
     $('#menu').click(function () {
         var menu_display = $('#menu ul').css('display');
 
-        if (menu_display == 'none') {
-            $('#menu').css('background', 'url("../img/menu_icon_selected.png") no-repeat');
-            $('#menu ul').css('display', 'block');
-        } else {
-            $('#menu').css('background', 'url("../img/menu_icon.png") no-repeat');
-            $('#menu ul').css('display', 'none');
+        if ($(window).width() < 600) {
+            if (menu_display == 'none') {
+                $('#menu').css('background', 'url("../img/menu_icon_selected.png") no-repeat');
+                $('#menu ul').css('display', 'block');
+            } else {
+                $('#menu').css('background', 'url("../img/menu_icon.png") no-repeat');
+                $('#menu ul').css('display', 'none');
+            }
         }
     });
 
     // Säätää navigointi menun toimimaan oikein myös ikkunan kokoa säädettäessä
     $(window).resize(function () {
-        if($(window).width() > 600) {
+        if ($(window).width() > 600) {
             $('#menu ul').css('display', 'block');
-            $('#menu').css('background', 'url("") no-repeat');  
+            $('#menu').css('background', 'url("") no-repeat');
         } else {
             $('#menu ul').css('display', 'none');
-            $('#menu').css('background', 'url("../img/menu_icon.png") no-repeat');  
+            $('#menu').css('background', 'url("../img/menu_icon.png") no-repeat');
         }
     });
 
