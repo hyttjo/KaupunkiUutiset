@@ -166,7 +166,13 @@ nav li:hover, nav li:active {
     color: #48799e; 
 }
 
-@media screen and (max-width: 600px) { /*iPad portrait view*/ 
+@media screen and (max-width: 300px) {
+    #topnavbar p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
     #menu {
         width: 30px;
         height: 30px;
@@ -306,7 +312,14 @@ h3 {
     float: right;
 }
 
-@media screen and (max-width: 768px) { /*iPad portrait view*/ 
+@media screen and (max-width: 400px) {
+    #news_footer > * {
+        margin: 0px;
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) { /* iPad resoluutio */ 
     #news_area {
         float: left;
         width: 90%;
@@ -414,7 +427,7 @@ h2 {
     padding: 0px 0px 20px 5px;
 }
 
-@media screen and (max-width: 768px) {  /*iPad portrait view*/
+@media screen and (max-width: 768px) {  /* iPad resoluutio */ 
     aside {
         display: none;
     }
@@ -453,7 +466,7 @@ footer a:hover {
     background-color: #808080;
 }
 
-@media screen and (max-width: 768px) {  /*iPad portrait view*/ 
+@media screen and (max-width: 768px) {  /* iPad resoluutio */ 
     footer ul {
         display: none;
     }

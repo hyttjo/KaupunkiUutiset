@@ -12,7 +12,7 @@ http://kaupunkiuutiset.gear.host
 <b>Kehitysalusta:</b><br>
 WebMatrix 3
 
-<b>Version Control:</b><br>
+<b>Versionhallintaohjelmisto:</b><br>
 GitHub
 
 <b>Käytetyt tekniikat:</b><br>
@@ -24,9 +24,15 @@ AJAX - Client-Server keskustelu keskenään<br>
 PHP - Serveri-puolen koodi<br>
 MySQL - tietokanta
 
+<b>Testatut toimivaksi selaimilla:</b><br>
+Google Chrome - 40<br>
+Internet Explorer - 11<br>
+Mozilla Firefox - 36
+
 <b>Ominaisuudet:</b><br>
 Käyttäjien rekisteröiminen ja kirjautuminen<br>
 Admin oikeuksilla mahdollisuus lähettää jarjestelmään uusia uutisia<br>
 (saa kun käyttäjä rekisteröi käyttämällä salasanaa "hamk2015")<br>
 Uutisten hakeminen tietokannasta ja järjestely uusimpien / luetuimpien / aihealueen mukaan<br>
-Kommenttien kirjoittaminen uutisiin mikäli on kirjautuneena sisään
+Kommenttien kirjoittaminen uutisiin mikäli on kirjautuneena sisään<br>
+Responsiivinen design toteutettu aina 250px leveyteen asti
