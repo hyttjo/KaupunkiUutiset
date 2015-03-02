@@ -30,10 +30,6 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="../css/news_area.css">
-        <script src="../js/news_area.js"></script>
-    </head>
     <body>
         <?php
         if ($main_num_rows == 1) {
@@ -57,10 +53,10 @@
             } 
             ?></p>
             <div id="news_footer">
-                <img src="img/speech_bubble_icon_128.png" alt="Kommentit ikoni"></img>
+                <img src="img/speech_bubble_icon.png" alt="Kommentit ikoni"></img>
                 <p><?php echo $main_row['commented']; ?> kommenttia</p>
                 <p id="watched_number"><?php echo $main_row['watched']; ?> katselukertaa</p>
-                <img id="eye_icon" src="img/eye_icon_128.png" alt="Katselukerrat ikoni"></img>  
+                <img id="eye_icon" src="img/eye_icon.png" alt="Katselukerrat ikoni"></img>  
             </div>
         </article>
         <?php 
@@ -79,9 +75,9 @@
             </div>
             <p><?php echo $row['summary']; ?></p>
             <div id="news_footer">
-                <img src="img/speech_bubble_icon_128.png" alt="Kommentit ikoni"></img>
+                <img src="img/speech_bubble_icon.png" alt="Kommentit ikoni"></img>
                 <p><?php echo $row['commented']; ?></p>
-                <img id="eye_icon" src="img/eye_icon_128.png" alt="Katselukerrat ikoni"></img>  
+                <img id="eye_icon" src="img/eye_icon.png" alt="Katselukerrat ikoni"></img>  
                 <p><?php echo $row['watched']; ?></p>
             </div>
         </article>

@@ -13,9 +13,6 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="../css/side_area.css">
-    </head>
     <body>
         <div id="side-block">
             <h2>Luetuimmat uutiset</h2>

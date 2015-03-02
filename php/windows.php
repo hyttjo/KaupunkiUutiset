@@ -5,10 +5,6 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="../css/windows.css">
-        <script src="../js/windows.js"></script>
-    </head>
     <body>
         <div id="login_window" title="Kirjaudu Sisään">
             <form id="login_form" onsubmit="return false" accept-charset="utf-8">

@@ -10,10 +10,6 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="../css/comment_area.css">
-        <script src="../js/comment_area.js"></script>
-    </head>
     <body>
         <div id="comment_area">
             <?php if ($_SESSION['logged_in']) { ?>
