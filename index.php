@@ -21,7 +21,7 @@
         
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700'>
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed'>
         
         <script src="js/jquery-2.1.3.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
