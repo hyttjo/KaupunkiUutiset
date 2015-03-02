@@ -25,9 +25,9 @@ PHP - Serveri-puolen koodi<br>
 MySQL - tietokanta
 
 <b>Testatut toimivaksi selaimilla:</b><br>
-Google Chrome - 40<br>
+Google Chrome - v40<br>
 Internet Explorer - 11<br>
-Mozilla Firefox - 36
+Mozilla Firefox - v36
 
 <b>Ominaisuudet:</b><br>
 Käyttäjien rekisteröiminen ja kirjautuminen<br>
