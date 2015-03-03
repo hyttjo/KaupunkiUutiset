@@ -80,6 +80,9 @@ $(document).ready(function () {
         return false;
     });
 
+    // Näyttää käsikursosin mobiili menun päällä
+    $('#menu').css('cursor', 'pointer');
+
     // Muuttaa navigointi menu ikonin klikatessa
     $('#menu').click(function () {
         var menu_display = $('#menu ul').css('display');
