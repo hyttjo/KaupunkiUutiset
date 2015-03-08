@@ -87,7 +87,7 @@ $(document).ready(function () {
     $('#menu').click(function () {
         var menu_display = $('#menu ul').css('display');
 
-        if ($(window).width() < 600) {
+        if ($(window).width() < 584) {
             if (menu_display == 'none') {
                 $('#menu').css('background', 'url("../img/menu_icon_selected.png") no-repeat');
                 $('#menu ul').css('display', 'block');
@@ -100,7 +100,7 @@ $(document).ready(function () {
 
     // Säätää navigointi menun toimimaan oikein myös ikkunan kokoa säädettäessä
     $(window).resize(function () {
-        if ($(window).width() > 600) {
+        if ($(window).width() > 583) {
             $('#menu ul').css('display', 'block');
             $('#menu').css('background', 'url("") no-repeat');
         } else {

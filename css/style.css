@@ -34,6 +34,7 @@ p {
 
 #container {
     width: 100%;
+    height: auto;
     max-width: 900px;
     margin: 0px auto;
     padding: 0px;
@@ -137,7 +138,7 @@ nav {
 ul {
     list-style-type: none;
     margin: 0px auto;
-    padding: 0px 40px;
+    padding: 0px 32px;
 }
 
 li {
