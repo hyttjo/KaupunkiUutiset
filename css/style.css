@@ -512,7 +512,7 @@ footer a:hover {
 }
 
 #info_window_ok, #profile_window_close, #post_news_link, #logout_button {
-    min-width: 80px;
+    min-width: 75px;
     margin:  30px 5px 10px 0px;
 }
 
