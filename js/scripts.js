@@ -210,6 +210,7 @@ $(document).ready(function () {
                     if (data == "Olet rekisteröitynyt onnistuneesti") {
                         $("#registration_window").dialog("close");
                         $("#nav_area").load("../php/nav.php");
+                        $("#windows").load("../php/windows.php");
                     }
                     $("#info_window_message").html(data);
                     $("#info_window").dialog("open");
@@ -223,8 +224,8 @@ $(document).ready(function () {
 
     // Ok-painike joka sulkee info ikkunan
     $("#info_window_ok").click(function () {
+        location.reload();
         $("#info_window").dialog("close");
-        $("#windows").load("../php/windows.php");
         return false;
     });
 
