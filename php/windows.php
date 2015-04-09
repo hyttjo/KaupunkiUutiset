@@ -2,8 +2,6 @@
     session_start();
 ?>
 
-<!DOCTYPE html>
-
 <html>
     <body>
         <div id="login_window" title="Kirjaudu Sisään">
@@ -12,6 +10,7 @@
                 <p>Salasana:</p><input id="login_password" type="password" pattern=".{6,20}" required title="6-20 merkkiä" required></input><br>
                 <button id="login_button" type="submit">Kirjaudu</button>
                 <button id="registration_link">Rekisteröidy</button>
+                <a id="send_password_to_mail_link" href="">Unohtuiko salasana?</a>
             </form>
         </div>
 

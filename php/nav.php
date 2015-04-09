@@ -37,9 +37,10 @@
     if($news_id) { $nav_active[0] = ""; }
 ?>
 
-<!DOCTYPE html>
-
 <html>
+    <head>
+        <script src="../js/scripts.js"></script>
+    </head>
     <body>
         <div id="topnavbar">
             <p><?php echo date('d.m.Y - G:i:s'); ?></p>

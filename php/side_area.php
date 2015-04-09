@@ -10,8 +10,6 @@
     $side_newest_news = mysqli_query($con, $query);
 ?>
 
-<!DOCTYPE html>
-
 <html>
     <body>
         <div id="side-block">

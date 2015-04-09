@@ -2,8 +2,6 @@
 
 ?>
 
-<!DOCTYPE html>
-
 <html>
     <body>
         <p><b>Kaupunki Uutiset Oy &#169; 2015</b><br>

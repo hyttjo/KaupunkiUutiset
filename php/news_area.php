@@ -27,8 +27,6 @@
     $news_results = mysqli_query($con, $query);
 ?>
 
-<!DOCTYPE html>
-
 <html>
     <body>
         <?php

@@ -183,6 +183,28 @@ $(document).ready(function () {
         }
     });
 
+    // Salasanan lähettäminen sähköpostiin
+    $("#send_password_to_mail_link").click(function () {
+        var username = $("#login_username").val();
+        
+        if (username.length > 3 && username.length < 15) {
+            $.ajax({
+                type: "post",
+                url: "php/scripts/send_password_to_mail.php",
+                data: "username=" + username,
+                success: function (data) {
+                    $("#info_window_message").html(data);
+                    $("#info_window").dialog("open");
+                }
+            });
+        } else {
+            var message = "Sanasalanan lähettämistä varten sinun täytyy antaa käyttäjätunnuksesi.<br>Pituus 4-14 merkkiä.";
+            $("#info_window_message").html(message);
+            $("#info_window").dialog("open");
+        }
+        return false;
+    });
+
     // Avaa rekisteröinti ikkunan auki ja sulkee sisään kirjautumis ikkunan
     $("#registration_link").click(function () {
         $("#login_window").dialog("close");
@@ -224,9 +246,8 @@ $(document).ready(function () {
 
     // Ok-painike joka sulkee info ikkunan
     $("#info_window_ok").click(function () {
-        location.reload();
+        //location.reload();
         $("#info_window").dialog("close");
-        return false;
     });
 
     // Alustaa profiili ikkunan

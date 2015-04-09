@@ -7,8 +7,6 @@
     $comments_num_rows = mysqli_num_rows($comments_results);
 ?>
 
-<!DOCTYPE html>
-
 <html>
     <body>
         <div id="comment_area">

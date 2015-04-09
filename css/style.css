@@ -553,6 +553,10 @@ footer a:hover {
     color:  #ffffff;
 }
 
+#send_password_to_mail_link {
+    font-size: 60%;
+}
+
 #post_news_window span {
     color:  #abd4f1;
     font-size: 70%;
