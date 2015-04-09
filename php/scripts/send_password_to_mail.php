@@ -51,7 +51,7 @@
                 echo "Salasana on lähetetty sähköpostiisi";
             }
         } else {
-            echo "Salasanan lähettäminen ei onnistunut:<br>Sähköpostiosoitetta ei löytynyt";
+            echo "Salasanan lähettäminen ei onnistunut:<br>Sähköpostiosoitetta ei ole määritetty käyttäjätunnukselle";
         }
     } else {
         echo "Salasanan lähettäminen ei onnistunut:<br>Käyttäjänimeä ei löytynyt";
