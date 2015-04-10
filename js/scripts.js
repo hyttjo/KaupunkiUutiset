@@ -179,6 +179,7 @@ $(document).ready(function () {
                     $("#windows").load("../php/windows.php");
                     $("#info_window_message").html(data);
                     $("#info_window").dialog("open");
+                    setTimeout(function(){ location.reload(); }, 3000);
                 }
             });
         }
@@ -270,7 +271,7 @@ $(document).ready(function () {
                         $("#update_profile_window").dialog("close");
                         $("#nav_area").load("../php/nav.php");
                         $("#windows").load("../php/windows.php");
-                        setTimeout(location.reload(), 5000);
+                        setTimeout(function(){ location.reload(); }, 3000);
                     }
                     $("#info_window_message").html(data);
                     $("#info_window").dialog("open");
@@ -289,7 +290,7 @@ $(document).ready(function () {
     });
 
     // Alustaa profiili ikkunan
-    $("#profile_window").dialog({ autoOpen: false, modal: true, width: 380, closeText: "X", show: "fold", hide: "blind" });
+    $("#profile_window").dialog({ autoOpen: false, modal: true, width: 400, closeText: "X", show: "fold", hide: "blind" });
 
     // Sulje-painike joka sulkee profiili ikkunan
     $("#profile_window_close").click(function () {
@@ -304,6 +305,7 @@ $(document).ready(function () {
         $("#info_window_message").html("Olet kirjautunut ulos");
         $("#info_window").dialog("open");
         $("#nav_area").load("../php/nav.php");
+        $("#windows").load("../php/windows.php");
         return false;
     });
 
