@@ -3,6 +3,9 @@
 ?>
 
 <html>
+    <head>
+        <script src="../js/scripts.js"></script>
+    </head>
     <body>
         <div id="login_window" title="Kirjaudu Sisään">
             <form id="login_form" onsubmit="return false" accept-charset="utf-8">
@@ -27,7 +30,7 @@
         </div>
 
         <div id="profile_window" title="Profiili">
-            <p>ID: <span><?php echo $_SESSION["id"]; ?></span></p>
+            <p>ID: <span id="profile_id"><?php echo $_SESSION["id"]; ?></span></p>
             <p>Käyttäjätunnus: <span><?php echo $_SESSION["username"]; ?></span></p>
             <p>Etunimi: <span><?php echo $_SESSION["firstname"]; ?></span></p>
             <p>Sukunimi: <span><?php echo $_SESSION["lastname"]; ?></span></p>
@@ -37,7 +40,19 @@
             <?php if($_SESSION["type"] == "admin") { ?>
                 <button id="post_news_link">Lähetä uutinen</button>
             <?php } ?>
+            <button id="modify_profile_link">Muokkaa</button>
             <button id="logout_button">Kirjaudu ulos</button>
+        </div>
+
+        <div id="update_profile_window" title="Päivitä profiilitietosi">
+            <form id="update_profile_form" onsubmit="return false" accept-charset="utf-8">
+                <p>Käyttäjätunnus:</p><input id="update_username" value="<?php echo $_SESSION["username"]; ?>" type="text" pattern=".{4,14}" required title="4-14 merkkiä"></input>
+                <p>Salasana:</p><input id="update_password" value="<?php echo $_SESSION["password"]; ?>" type="text" pattern=".{6,20}" required title="6-20 merkkiä"></input>
+                <p>Etunimi:</p><input id="update_firstname" value="<?php echo $_SESSION["firstname"]; ?>" type="text"></input>
+                <p>Sukunimi:</p><input id="update_lastname" value="<?php echo $_SESSION["lastname"]; ?>" type="text"></input>
+                <p>Sähköposti:</p><input id="update_email" value="<?php echo $_SESSION["email"]; ?>" type="email"></input><br>
+                <button id="update_profile_button" type="submit">Päivitä</button>
+            </form>
         </div>
 
         <div id="post_news_window" title="Lähetä uutinen">

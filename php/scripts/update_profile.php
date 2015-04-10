@@ -8,18 +8,17 @@
     $email = str_replace("'", "", $_POST["email"]);
     $password = str_replace("'", "", $_POST["password"]);
     $type = "normal";
+    $id = $_SESSION["id"];
 
     if ($password == "hamk2015") {
         $type="admin";    
     }
-    
-    $query="INSERT INTO users(username, firstname, lastname, email, password, type) 
-    values('$username', '$firstname', '$lastname', '$email', '$password', '$type')";
+
+    $query = "UPDATE users SET username='$username', firstname='$firstname', lastname='$lastname', email='$email', password='$password', type='$type' WHERE id='$id'";
 
     if(mysqli_query($con, $query)){
-        echo "Olet rekisteröitynyt onnistuneesti";
+        echo "Olet päivittänyt profiilisi onnistuneesti";
         $_SESSION["logged_in"] = true;
-        $_SESSION["id"] = mysqli_query($con, "SELECT id FROM users WHERE username = '$username'");
         $_SESSION["username"] = $username;
         $_SESSION["password"] = $password;
         $_SESSION["firstname"] = $firstname;
@@ -27,6 +26,6 @@
         $_SESSION["email"] = $email;
         $_SESSION["type"] = $type;
     } else {
-        echo "Virhe:<br>käyttäjänimi on mahdollisesti jo varattu";
+        echo "Virhe:<br>tietoja päivitettäessä tapahtui virhe";
     }
 ?>

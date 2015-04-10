@@ -17,6 +17,7 @@
         $_SESSION["logged_in"] = true;
         $_SESSION["id"] = $row["id"];
         $_SESSION["username"] = $row["username"];
+        $_SESSION["password"] = $row["password"];
         $_SESSION["firstname"] = $row["firstname"];
         $_SESSION["lastname"] = $row["lastname"];
         $_SESSION["email"] = $row["email"];

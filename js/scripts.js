@@ -176,6 +176,7 @@ $(document).ready(function () {
                 success: function (data) {
                     $("#login_window").dialog("close");
                     $("#nav_area").load("../php/nav.php");
+                    $("#windows").load("../php/windows.php");
                     $("#info_window_message").html(data);
                     $("#info_window").dialog("open");
                 }
@@ -186,7 +187,7 @@ $(document).ready(function () {
     // Salasanan lähettäminen sähköpostiin
     $("#send_password_to_mail_link").click(function () {
         var username = $("#login_username").val();
-        
+
         if (username.length > 3 && username.length < 15) {
             $.ajax({
                 type: "post",
@@ -241,6 +242,43 @@ $(document).ready(function () {
         }
     });
 
+    // Avaa profiilin muokkaus ikkunan auki ja sulkee profiili ikkunan
+    $("#modify_profile_link").click(function () {
+        $("#profile_window").dialog("close");
+        $("#update_profile_window").dialog("open");
+        return false;
+    });
+
+    // Alustaa profiilin muokkaus ikkunan
+    $("#update_profile_window").dialog({ autoOpen: false, modal: true, closeText: "X", show: "fold", hide: "blind" });
+
+    // Profiilin päivitys painikkeen logiikka
+    $("#update_profile_button").click(function () {
+        var firstname = $("#update_firstname").val();
+        var lastname = $("#update_lastname").val();
+        var username = $("#update_username").val();
+        var email = $("#update_email").val();
+        var password = $("#update_password").val();
+
+        if (username.length > 3 && username.length < 15 && password.length > 5 && password.length < 21) {
+            $.ajax({
+                type: "post",
+                url: "php/scripts/update_profile.php",
+                data: "firstname=" + firstname + "&lastname=" + lastname + "&username=" + username + "&email=" + email + "&password=" + password,
+                success: function (data) {
+                    if (data == "Olet päivittänyt profiilisi onnistuneesti") {
+                        $("#update_profile_window").dialog("close");
+                        $("#nav_area").load("../php/nav.php");
+                        $("#windows").load("../php/windows.php");
+                        setTimeout(location.reload(), 5000);
+                    }
+                    $("#info_window_message").html(data);
+                    $("#info_window").dialog("open");
+                }
+            });
+        }
+    });
+
     // Alustaa info ikkunan
     $("#info_window").dialog({ autoOpen: false, modal: true, closeText: "X", show: "fold", hide: "blind" });
 
@@ -251,7 +289,7 @@ $(document).ready(function () {
     });
 
     // Alustaa profiili ikkunan
-    $("#profile_window").dialog({ autoOpen: false, modal: true, closeText: "X", show: "fold", hide: "blind" });
+    $("#profile_window").dialog({ autoOpen: false, modal: true, width: 380, closeText: "X", show: "fold", hide: "blind" });
 
     // Sulje-painike joka sulkee profiili ikkunan
     $("#profile_window_close").click(function () {

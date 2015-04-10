@@ -484,7 +484,7 @@ footer a:hover {
 /********* Ikkunat *********/
 /***************************/
 
-#login_window, #registration_window, #info_window, #post_news_window, #profile_window {
+#login_window, #registration_window, #info_window, #post_news_window, #profile_window, #update_profile_window {
     display: none;
 }
 
