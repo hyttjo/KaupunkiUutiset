@@ -123,12 +123,16 @@ $(document).ready(function () {
     //////////////////////////////////////////
 
     // Näyttää käsikursosin artikkelin päällä
-    $('article').css('cursor', 'pointer');
+    if ($.getUrlVar('news_id') != null) {
+        $('article').css('cursor', 'pointer');
+    }
 
     // Ohjaa oikeaan osoitteeseen artikkelia klikatessa lukemalla data-news_id attribuutin
     $('article').click(function () {
-        var id = $(this).data('news_id');
-        $(location).attr('href', 'index.php?news_id=' + id);
+        if ($.getUrlVar('news_id') == null) {
+            var id = $(this).data('news_id');
+            $(location).attr('href', 'index.php?news_id=' + id);
+        }
     });
 
     //////////////////////////////////////////
@@ -179,7 +183,7 @@ $(document).ready(function () {
                     $("#windows").load("../php/windows.php");
                     $("#info_window_message").html(data);
                     $("#info_window").dialog("open");
-                    setTimeout(function(){ location.reload(); }, 3000);
+                    setTimeout(function () { location.reload(); }, 3000);
                 }
             });
         }
@@ -271,7 +275,7 @@ $(document).ready(function () {
                         $("#update_profile_window").dialog("close");
                         $("#nav_area").load("../php/nav.php");
                         $("#windows").load("../php/windows.php");
-                        setTimeout(function(){ location.reload(); }, 3000);
+                        setTimeout(function () { location.reload(); }, 3000);
                     }
                     $("#info_window_message").html(data);
                     $("#info_window").dialog("open");
