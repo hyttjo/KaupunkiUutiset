@@ -178,6 +178,12 @@ nav li:hover, nav li:active {
     }
 }
 
+@media screen and (max-width: 400px) {
+    #topnavbar {
+        padding-right: 10px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     #menu {
         width: 30px;
@@ -327,7 +333,7 @@ h3 {
 }
 
 @media screen and (max-width: 768px) { /* iPad resoluutio */ 
-    #news_area {
+    #news_area, .single_news #news_area {
         float: left;
         width: 90%;
     }
@@ -349,6 +355,7 @@ h3 {
     }
 }
 
+
 /*********************************/
 /********* Kommenttialue *********/
 /*********************************/
@@ -356,6 +363,10 @@ h3 {
 #comment_area {
     max-width: 570px;
     margin: 0px auto;
+}
+
+#comment_area textarea {
+    width: 470px;
 }
 
 #comment_area button {
@@ -397,6 +408,18 @@ h3 {
 
 #comment_text {
     margin: 10px 20px;
+}
+
+@media screen and (max-width: 650px) {
+    #comment_area textarea {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #comment_area textarea {
+        width: 60%;
+    }
 }
 
 /**********************************/
