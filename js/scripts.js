@@ -123,7 +123,7 @@ $(document).ready(function () {
     //////////////////////////////////////////
 
     // Näyttää käsikursosin artikkelin päällä
-    if ($.getUrlVar('news_id') != null) {
+    if ($.getUrlVar('news_id') == null) {
         $('article').css('cursor', 'pointer');
     }
 
