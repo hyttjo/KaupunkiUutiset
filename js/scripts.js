@@ -250,6 +250,26 @@ $(document).ready(function () {
     // Avaa profiilin muokkaus ikkunan auki ja sulkee profiili ikkunan
     $("#modify_profile_link").click(function () {
         $("#profile_window").dialog("close");
+
+        var profile_id = $("#profile_id").html();
+
+        $.ajax({
+            type: "post",
+            url: "php/scripts/get_profile_information.php",
+            data: "profile_id=" + profile_id,
+            success: function (data) {
+                var json = $.parseJSON(data);
+                
+                $("#update_firstname").val(json.firstname);
+                $("#update_lastname").val(json.lastname);
+                $("#update_username").val(json.username);
+                $("#update_email").val(json.email);
+                $("#update_password").val(json.password);
+                
+                $("#windows").load("../php/windows.php");
+            }
+        });
+
         $("#update_profile_window").dialog("open");
         return false;
     });

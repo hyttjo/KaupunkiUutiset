@@ -46,11 +46,11 @@
 
         <div id="update_profile_window" title="Päivitä profiilitietosi">
             <form id="update_profile_form" onsubmit="return false" accept-charset="utf-8">
-                <p>Käyttäjätunnus:</p><input id="update_username" value="<?php echo $_SESSION["username"]; ?>" type="text" pattern=".{4,14}" required title="4-14 merkkiä"></input>
-                <p>Salasana:</p><input id="update_password" value="<?php echo $_SESSION["password"]; ?>" type="text" pattern=".{6,20}" required title="6-20 merkkiä"></input>
-                <p>Etunimi:</p><input id="update_firstname" value="<?php echo $_SESSION["firstname"]; ?>" type="text"></input>
-                <p>Sukunimi:</p><input id="update_lastname" value="<?php echo $_SESSION["lastname"]; ?>" type="text"></input>
-                <p>Sähköposti:</p><input id="update_email" value="<?php echo $_SESSION["email"]; ?>" type="email"></input><br>
+                <p>Käyttäjätunnus:</p><input id="update_username" type="text" pattern=".{4,14}" required title="4-14 merkkiä"></input>
+                <p>Salasana:</p><input id="update_password" type="text" pattern=".{6,20}" required title="6-20 merkkiä"></input>
+                <p>Etunimi:</p><input id="update_firstname" type="text"></input>
+                <p>Sukunimi:</p><input id="update_lastname" type="text"></input>
+                <p>Sähköposti:</p><input id="update_email" type="email"></input><br>
                 <button id="update_profile_button" type="submit">Päivitä</button>
             </form>
         </div>
