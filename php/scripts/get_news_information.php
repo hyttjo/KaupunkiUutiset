@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     include 'mysql.php';
 
     $news_id = $_POST['news_id'];

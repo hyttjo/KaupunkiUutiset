@@ -79,9 +79,9 @@
 
         <div id="edit_news_window" title="Muokkaa uutista">
             <form id="edit_news_form" onsubmit="return false" accept-charset="utf-8">
-                <p>Otsikko:</p> <textarea id="update_header" rows="2" cols="75" maxlength="255" required></textarea>
-                <p>Lyhennelmä:</p><textarea id="update_summary" rows="3" cols="75" maxlength="800" required></textarea>
-                <p>Uutisteksti:</p><textarea id="update_news_text" rows="8" cols="75"></textarea><br>
+                <p>Otsikko: <span>(max 255 merkkiä)</span></p> <textarea id="update_header" rows="2" cols="75" maxlength="255" required></textarea>
+                <p>Lyhennelmä: <span>(max 800 merkkiä)</span></p><textarea id="update_summary" rows="3" cols="75" maxlength="800" required></textarea>
+                <p>Uutisteksti: <span>(HUOM. kirjoita HTML tagit muotoillaksesi teksti, esim. &lt;br&gt; &lt;b&gt; &lt;u&gt; &lt;i&gt;)</span></p><textarea id="update_news_text" rows="8" cols="75"></textarea><br>
                 <button id="edit_news_button" type="submit">Lähetä muokattu uutinen</button>
             </form>
         </div>

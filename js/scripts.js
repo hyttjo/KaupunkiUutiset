@@ -372,20 +372,19 @@ $(document).ready(function () {
 
     // Lähetä muokattu uutinen painike
     $("#edit_news_button").click(function () {
-        var news_id = $.getUrlVar('news_id'); // lisätty news_id lähettäminen jotta php tiedosto tietää minkä uutisen sen pitää päivittää
+        var news_id = $.getUrlVar('news_id');
         var header = $("#update_header").val();
         var summary = $("#update_summary").val();
         var news_text = $("#update_news_text").val();
 
-        if (header.length > 1 && summary.length > 10 && news_text.length > 10) { // muutettu header_title.length -> header.length
+        if (header.length > 1 && summary.length > 10 && news_text.length > 10) {
             $.ajax({
                 type: "post",
-                url: "php/scripts/update_news_information.php",
-                data: "news_id=" + news_id + "&header=" + header + "&summary=" + summary + "&news_text=" + news_text, // lisätty news_id lähettäminen jotta php tiedosto tietää minkä uutisen sen pitää päivittää
+                url: "php/scripts/update_news.php",
+                data: "news_id=" + news_id + "&header=" + header + "&summary=" + summary + "&news_text=" + news_text,
                 success: function (data) {
-                    if (data == "Olet päivittänyt uutisen onnistuneesti.") { // muutettu "Uutista muokattu onnistuneesti" -> "Olet päivittänyt uutisen onnistuneesti." (eli samaksi mitä php tiedosto lähettää onnistuessaan)
+                    if (data == "Olet päivittänyt uutisen onnistuneesti.") {
                         $("#edit_news_window").dialog("close");
-                        // poistettu $("#nav_area").load("../php/nav.php"); (se on turha tälle toiminnolle kun "nav" alueella mikään ei päivity)
                         $("#windows").load("../php/windows.php");
                         setTimeout(function () { location.reload(); }, 3000);
                     }
