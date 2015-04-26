@@ -259,13 +259,13 @@ $(document).ready(function () {
             data: "profile_id=" + profile_id,
             success: function (data) {
                 var json = $.parseJSON(data);
-                
+
                 $("#update_firstname").val(json.firstname);
                 $("#update_lastname").val(json.lastname);
                 $("#update_username").val(json.username);
                 $("#update_email").val(json.email);
                 $("#update_password").val(json.password);
-                
+
                 $("#windows").load("../php/windows.php");
             }
         });
@@ -340,5 +340,59 @@ $(document).ready(function () {
     $("#post_news_link").click(function () {
         $("#post_news_window").dialog("open");
         return false;
+    });
+
+    // Avaa muokkaa uutista ikkunan
+    $("#edit_news_link").click(function () {
+        $("#profile_window").dialog("close");
+
+        var news_id = $.getUrlVar('news_id');
+
+        $.ajax({
+            type: "post",
+            url: "php/scripts/get_news_information.php",
+            data: "news_id=" + news_id,
+            success: function (data) {
+                var json = $.parseJSON(data);
+
+                $("#update_header").val(json.header);
+                $("#update_summary").val(json.summary);
+                $("#update_news_text").val(json.news_text);
+
+                $("#windows").load("..php/windows.php");
+            }
+        });
+
+        $("#edit_news_window").dialog("open");
+        return false;
+    });
+
+    // Muokkaa uutista ikkunan alustus
+    $("#edit_news_window").dialog({ autoOpen: false, modal: true, closeText: "X", show: "fold", hide: "blind", width: "550px" });
+
+    // Lähetä muokattu uutinen painike
+    $("#edit_news_button").click(function () {
+        var news_id = $.getUrlVar('news_id'); // lisätty news_id lähettäminen jotta php tiedosto tietää minkä uutisen sen pitää päivittää
+        var header = $("#update_header").val();
+        var summary = $("#update_summary").val();
+        var news_text = $("#update_news_text").val();
+
+        if (header.length > 1 && summary.length > 10 && news_text.length > 10) { // muutettu header_title.length -> header.length
+            $.ajax({
+                type: "post",
+                url: "php/scripts/update_news_information.php",
+                data: "news_id=" + news_id + "&header=" + header + "&summary=" + summary + "&news_text=" + news_text, // lisätty news_id lähettäminen jotta php tiedosto tietää minkä uutisen sen pitää päivittää
+                success: function (data) {
+                    if (data == "Olet päivittänyt uutisen onnistuneesti.") { // muutettu "Uutista muokattu onnistuneesti" -> "Olet päivittänyt uutisen onnistuneesti." (eli samaksi mitä php tiedosto lähettää onnistuessaan)
+                        $("#edit_news_window").dialog("close");
+                        // poistettu $("#nav_area").load("../php/nav.php"); (se on turha tälle toiminnolle kun "nav" alueella mikään ei päivity)
+                        $("#windows").load("../php/windows.php");
+                        setTimeout(function () { location.reload(); }, 3000);
+                    }
+                    $("#info_window_message").html(data);
+                    $("#info_window").dialog("open");
+                }
+            });
+        }
     });
 });
